@@ -16,5 +16,4 @@ workflows:
 
   call-code-stream:
     jobs:
-      - vmwarecs/callcs:
-          refresh_token: $CSP_REFRESH_TOKEN
+      - vmwarecs/callcs
