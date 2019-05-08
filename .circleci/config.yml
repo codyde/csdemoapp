@@ -1,4 +1,8 @@
 version: 2.1
+executors:
+  my-executor:
+    docker:
+      - image: circleci/python:latest
 
 orbs:
     docker: circleci/docker@0.1.0
@@ -8,8 +12,10 @@ workflows:
   build-and-publish-docker-image:
     jobs:
       - docker/publish:
+          executer: my-executor
           image: codydearkland/$CIRCLE_PROJECT_REPONAME
   call-pipeline:
     jobs:
-      - vmwarecs/run:
+      - vmwarecs/callcs:
+          executer: my-executor
           refresh_token: ${refresh_token}
