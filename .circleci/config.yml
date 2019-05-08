@@ -13,5 +13,8 @@ workflows:
     jobs:
       - docker/publish:
           image: codydearkland/$CIRCLE_PROJECT_REPONAME
+
+  call-code-stream:
+    jobs:
       - vmwarecs/callcs:
           refresh_token: ${refresh_token}
