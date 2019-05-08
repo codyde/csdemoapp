@@ -16,6 +16,5 @@ workflows:
 
   call-code-stream:
     jobs:
-      - vmwarecs/callcs
+      - vmwarecs/callcs:
             csp-token: f474547d-b841-46d5-b28d-5e8b9d11546f
-
