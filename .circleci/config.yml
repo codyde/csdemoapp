@@ -12,10 +12,8 @@ workflows:
   build-and-publish-docker-image:
     jobs:
       - docker/publish:
-          executer: my-executor
           image: codydearkland/$CIRCLE_PROJECT_REPONAME
   call-pipeline:
     jobs:
       - vmwarecs/callcs:
-          executer: my-executor
           refresh_token: ${refresh_token}
