@@ -10,6 +10,7 @@ workflows:
       - docker/publish:
           image: codydearkland/$CIRCLE_PROJECT_REPONAME
   call-pipeline:
-    vmwarecs:
-        refresh_token: d9381d8a-cbcf-4030-b4df-955a9170dfad
+    jobs:
+      - vmwarecs:
+          refresh_token: d9381d8a-cbcf-4030-b4df-955a9170dfad
       
