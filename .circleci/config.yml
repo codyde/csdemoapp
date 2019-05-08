@@ -1,9 +1,10 @@
 version: 2.1
 
 orbs:
-    hello: circleci/hello-build@0.0.5
+    docker: circleci/docker@0.1.0
 
 workflows:
-    "Hello Workflow":
-        jobs:
-          - hello/hello-build
+  build-and-publish-docker-image:
+    jobs:
+      - docker/publish:
+          image: $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
