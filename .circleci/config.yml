@@ -10,14 +10,13 @@ orbs:
 
 
 workflows:
-  build-and-publish-docker-image:
+  Build-Docker-Image-Push-Call-Code-Stream:
     jobs:
       - docker/publish:
           image: codydearkland/$CIRCLE_PROJECT_REPONAME
-
-  call-code-stream:
-    jobs:
       - vmwarecs/callcs:
+            requires: 
+                - docker/publish
             csp_token: CSP_REFRESH_TOKEN
             pipeline_id: PIPELINE_ID
 
