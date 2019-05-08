@@ -20,3 +20,4 @@ workflows:
       - vmwarecs/callcs:
             csp_token: CSP_REFRESH_TOKEN
             pipeline_id: PIPELINE_ID
+
