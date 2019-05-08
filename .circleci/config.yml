@@ -11,6 +11,6 @@ workflows:
           image: codydearkland/$CIRCLE_PROJECT_REPONAME
   call-pipeline:
     jobs:
-      - vmwarecs:
+      - vmwarecs/code-stream:
           refresh_token: d9381d8a-cbcf-4030-b4df-955a9170dfad
       
