@@ -13,4 +13,3 @@ workflows:
     jobs:
       - vmwarecs/call-pipeline:
           refresh_token: d9381d8a-cbcf-4030-b4df-955a9170dfad
-      
