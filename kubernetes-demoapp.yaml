@@ -1,27 +1,27 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: cmbu-app-frontend
+  name: kubecon-demo
   namespace: custom-application
   labels:
-    app: bootcamp
+    app: demoapp
 spec:
   selector:
     matchLabels:
-      app: bootcamp
+      app: demoapp
       role: web
       tier: frontend
   replicas: 2
   template:
     metadata:
       labels:
-        app: bootcamp
+        app: demoapp
         role: web
         tier: frontend
     spec:
       containers:
-      - name: frontend
-        image: codydearkland/cmbu-app-frontend:latest  # or just image: redis
+      - name: demoapp
+        image: codydearkland/csdemoapp:latest  # or just image: redis
         ports:
         - containerPort: 80
 ---
@@ -30,17 +30,17 @@ kind: Service
 metadata:
   namespace: custom-application
   labels:
-    app: bootcamp
+    app: demoapp
     role: web
     tier: frontend
-  name: frontend
+  name: kubecon-demo
 spec:
   ports:
   - port: 80
     protocol: TCP
     targetPort: 80
   selector:
-    app: bootcamp
+    app: demoapp
     role: web
     tier: frontend
   type: LoadBalancer
