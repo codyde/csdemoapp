@@ -4,9 +4,11 @@ executors:
     docker:
       - image: circleci/python:latest
 
+
 orbs:
     docker: circleci/docker@0.1.0
     vmwarecs: vmwarecs/code-stream@dev:first
+
 
 workflows:
   build-and-publish-docker-image:
