@@ -11,5 +11,5 @@ workflows:
           image: codydearkland/$CIRCLE_PROJECT_REPONAME
   call-pipeline:
     jobs:
-      - vmwarecs/call-pipeline:
+      - vmwarecs/run:
           refresh_token: ${refresh_token}
