@@ -9,8 +9,6 @@ spec:
   selector:
     matchLabels:
       app: demoapp
-      role: web
-      tier: frontend
   replicas: 2
   template:
     metadata:
@@ -31,8 +29,6 @@ metadata:
   namespace: custom-application
   labels:
     app: demoapp
-    role: web
-    tier: frontend
   name: kubecon-demo
 spec:
   ports:
@@ -41,6 +37,4 @@ spec:
     targetPort: 80
   selector:
     app: demoapp
-    role: web
-    tier: frontend
   type: LoadBalancer
