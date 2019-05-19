@@ -1,7 +1,5 @@
-# Demonstration Application for VMware Cloud Automation Services (CAS)
+# Demonstration Application for VMware Cloud Automation Services (CAS) at Kubecon 2019 EU
 
 ## Application Description
 
-### Tier 1 - Frontend Application - User Presentation
-
-* Angular 6 front end with VMware ClarityUI (https://vmware.github.io/clarity/)
+* Angular 7 front end with VMware ClarityUI (https://vmware.github.io/clarity/)
